@@ -1,0 +1,30 @@
+name: Demo pipline 
+
+on:
+    push:
+        branches: [main, dev]
+    pull_request:
+        branches: [main, dev]
+    schedule: 
+        - cron: "*/1 * * * *"
+jobs:
+    set_job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: create file
+              run: touch github-action.txt
+            - name: print Hellow World
+              run: echo Hello World
+
+
+    build_job:
+        runs-on: windows-latest
+        steps:
+            - name: display hello
+              run: echo Hello World
+    deploy_job:
+        runs-on: macos-latest
+        steps:
+            - run: echo Hello Mac
+            
+
