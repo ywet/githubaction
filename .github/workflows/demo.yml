@@ -3,7 +3,7 @@ name: Demo pipline
 on:
     push:
         branches: [main, dev]
-    pull_requests:
+    pull_request:
         branches: [main, dev]
     schedule: 
         - cron: "*/1 * * * *"
