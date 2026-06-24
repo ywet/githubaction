@@ -15,6 +15,8 @@ jobs:
               run: touch github-action.txt
             - name: print Hellow World
               run: echo Hello World
+            - name: display readme file
+            - run: car README.md
 
 
     build_job:
