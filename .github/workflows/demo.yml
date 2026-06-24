@@ -5,8 +5,8 @@ on:
         branches: [main, dev]
     pull_request:
         branches: [main, dev]
-    schedule: 
-        - cron: "*/1 * * * *"
+    # schedule: 
+     #   - cron: "*/1 * * * *"
 jobs:
     set_job:
         runs-on: ubuntu-latest
