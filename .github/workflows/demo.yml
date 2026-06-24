@@ -12,7 +12,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: checkout repo
-              uses: actions/checkouts@v4
+              uses: actions/checkout@v4
             - name: create file
               run: touch github-action.txt
             - name: print Hellow World
