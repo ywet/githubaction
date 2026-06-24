@@ -8,7 +8,7 @@ on:
     # schedule: 
      #   - cron: "*/1 * * * *"
 jobs:
-    set_job:
+    setup_job:
         runs-on: ubuntu-latest
         steps:
             - name: checkout repo
@@ -22,12 +22,13 @@ jobs:
 
 
     build_job:
-        needs: set_job
+        needs: setup_job
         runs-on: windows-latest
         steps:
             - name: display hello
               run: echo Hello World
     deploy_job:
+        needs: setup_job
         runs-on: macos-latest
         steps:
             - run: echo Hello Mac
