@@ -16,7 +16,7 @@ jobs:
             - name: print Hellow World
               run: echo Hello World
             - name: display readme file
-            - run: car README.md
+              run: car README.md
 
 
     build_job:
