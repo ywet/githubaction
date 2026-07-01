@@ -16,9 +16,15 @@ jobs:
             - name: create file
               run: | 
                 touch github-action.txt
+                echo from first jo> github-action.txt
                 ls -la
                 echo Hello World
                 cat README.md
+            - name: uplaod my artifacts
+              uses: actions/download-artifact@v8 
+              with:
+                name: my-file
+                path: github-action.txt
 
 
     build_job:
@@ -28,8 +34,12 @@ jobs:
         steps:
             - name: display hello
               run: echo Hello World
-            - name: Display github-avyion.txt
+              uses: actions/download-artifact@v4
+              with: 
+                path: github-action.txt
+            - name: Display github-action.txt
               run: cat github-acyion.txt
+
     deploy_job:
         needs: build_job   
         runs-on: macos-latest
@@ -37,3 +47,4 @@ jobs:
             - run: echo Hello Mac
             
 
+ 
