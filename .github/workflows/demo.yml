@@ -21,7 +21,7 @@ jobs:
                 echo Hello World
                 cat README.md
             - name: upload my artifacts
-              uses: actions/download-artifact@v4 
+              uses: actions/upload-artifact@v4 
               with:
                 name: my-file
                 path: github-action.txt
