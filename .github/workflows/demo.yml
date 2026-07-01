@@ -34,9 +34,9 @@ jobs:
         steps:
             - name: display hello
               run: echo Hello World
-              uses: actions/download-artifact@v4
+            - uses: actions/download-artifact@v4
               with: 
-                path: github-action.txt
+                name: my-file
             - name: Display github-action.txt
               run: cat github-acyion.txt
 
