@@ -20,8 +20,8 @@ jobs:
                 ls -la
                 echo Hello World
                 cat README.md
-            - name: uplaod my artifacts
-              uses: actions/download-artifact@v8 
+            - name: upload my artifacts
+              uses: actions/download-artifact@v4 
               with:
                 name: my-file
                 path: github-action.txt
@@ -38,7 +38,7 @@ jobs:
               with: 
                 name: my-file
             - name: Display github-action.txt
-              run: cat github-acyion.txt
+              run: cat github-action.txt
 
     deploy_job:
         needs: build_job   
